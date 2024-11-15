@@ -1,0 +1,86 @@
+body {
+    background-color: #0000b3;
+}
+#chat {
+    background-color: #4d4dff;
+    padding: 10px;
+    font-family: Arial;
+    float: right;
+    margin-right: -245px;
+    animation: pop-up 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+body,h2,ul {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+#chat .messages {
+    border: 1px solid #ccccff;
+    padding: 10px;
+    width: 200px;
+    color: white;
+}
+#chat textarea {
+    width: 200px;
+    padding: 10px;
+}
+#chat h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+#chat h2::before {
+    content: "";
+    background-image: url(./avataaars\ \(2\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: -70px;
+    margin-right: 20px;
+}
+
+#chat .messages li {
+    background-color: #9999ff;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 15px 15px 15px 0;
+    color: #e6e6ff;
+    opacity: 0;
+}
+#chat .messages li:nth-child(1) {
+    animation:  message-show 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+#chat .messages li:nth-child(2) {
+    animation: message-show 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+#chat .messages li:nth-child(3) {
+    animation: message-show 1s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes pop-up {
+    from {
+        margin-right: -245px;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+@keyframes message-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
